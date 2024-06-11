@@ -497,6 +497,12 @@
       "title": "",
       "visibility": ""
     },
+    "logs": {
+      "maximum-pinned-logs": "",
+      "no-logs-found": "",
+      "scan-for-older-logs": "",
+      "stop-scan": ""
+    },
     "rich-history": {
       "close-tooltip": "Fermer l'historique des requêtes",
       "datasource-a-z": "Source de données A-Z",
@@ -1478,11 +1484,6 @@
       "toggle-edit-mode": "Activer/désactiver le mode édition de texte"
     },
     "query-editor-not-exported": "Le plugin source de données n'exporte aucun composant de l'éditeur de requête"
-  },
-  "recentlyDeleted": {
-    "filter": {
-      "placeholder": ""
-    }
   },
   "refresh-picker": {
     "aria-label": {

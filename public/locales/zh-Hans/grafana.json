@@ -492,6 +492,12 @@
       "title": "",
       "visibility": ""
     },
+    "logs": {
+      "maximum-pinned-logs": "",
+      "no-logs-found": "",
+      "scan-for-older-logs": "",
+      "stop-scan": ""
+    },
     "rich-history": {
       "close-tooltip": "关闭查询历史记录",
       "datasource-a-z": "数据源 A-Z",
@@ -1472,11 +1478,6 @@
       "toggle-edit-mode": "切换文本编辑模式"
     },
     "query-editor-not-exported": "数据源插件不导出任何查询编辑器组件"
-  },
-  "recentlyDeleted": {
-    "filter": {
-      "placeholder": ""
-    }
   },
   "refresh-picker": {
     "aria-label": {

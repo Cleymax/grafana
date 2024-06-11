@@ -497,6 +497,12 @@
       "title": "",
       "visibility": ""
     },
+    "logs": {
+      "maximum-pinned-logs": "",
+      "no-logs-found": "",
+      "scan-for-older-logs": "",
+      "stop-scan": ""
+    },
     "rich-history": {
       "close-tooltip": "Abfrageverlauf schließen",
       "datasource-a-z": "Datenquelle A-Z",
@@ -1478,11 +1484,6 @@
       "toggle-edit-mode": "Textbearbeitungsmodus umschalten"
     },
     "query-editor-not-exported": "Datenquellen-Plugin exportiert keine Komponente des Abfrageeditors"
-  },
-  "recentlyDeleted": {
-    "filter": {
-      "placeholder": ""
-    }
   },
   "refresh-picker": {
     "aria-label": {
