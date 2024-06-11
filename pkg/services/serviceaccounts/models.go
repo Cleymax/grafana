@@ -5,6 +5,7 @@ import (
 
 	"github.com/grafana/grafana/pkg/models/roletype"
 	"github.com/grafana/grafana/pkg/services/accesscontrol"
+	"github.com/grafana/grafana/pkg/services/accesscontrol/resourcepermissions"
 	"github.com/grafana/grafana/pkg/services/auth/identity"
 	"github.com/grafana/grafana/pkg/services/org"
 	"github.com/grafana/grafana/pkg/util/errutil"
@@ -200,6 +201,7 @@ type ManageExtSvcAccountCmd struct {
 	Enabled     bool
 	OrgID       int64
 	Permissions []accesscontrol.Permission
+	ActionSets  []resourcepermissions.ActionSet
 }
 
 type EnableExtSvcAccountCmd struct {

@@ -206,6 +206,7 @@ func (*AccessControlStore) savePermissions(ctx context.Context, sess *db.Session
 			return errors.New("failed to delete permissions that have been removed from role")
 		}
 	}
+
 	return nil
 }
 

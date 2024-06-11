@@ -166,6 +166,7 @@ func (esa *ExtSvcAccountsService) SaveExternalService(ctx context.Context, cmd *
 		Enabled:     cmd.Self.Enabled,
 		OrgID:       extsvcauth.TmpOrgID,
 		Permissions: cmd.Self.Permissions,
+		ActionSets:  cmd.Self.ActionSets,
 	})
 	if err != nil {
 		return nil, err
@@ -273,6 +274,7 @@ func (esa *ExtSvcAccountsService) ManageExtSvcAccount(ctx context.Context, cmd *
 		ExtSvcSlug:  cmd.ExtSvcSlug,
 		OrgID:       cmd.OrgID,
 		Permissions: cmd.Permissions,
+		ActionSets:  cmd.ActionSets,
 		SaID:        saID,
 	})
 	if errSave != nil {
@@ -318,6 +320,15 @@ func (esa *ExtSvcAccountsService) saveExtSvcAccount(ctx context.Context, cmd *sa
 		Permissions:       cmd.Permissions,
 	}); err != nil {
 		return 0, err
+	}
+
+	// update the service account's action sets
+	if esa.actionSetsSvc != nil {
+		ctxLogger.Debug("Update action sets", "service", cmd.ExtSvcSlug, "saID", cmd.SaID)
+		svc := *esa.actionSetsSvc
+		for _, actionSet := range cmd.ActionSets {
+			svc.StoreActionSet("testresource", actionSet.Action, actionSet.Actions)
+		}
 	}
 
 	esa.metrics.savedCount.Inc()
